@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import HomeTemplateView
+from . import views
 
 urlpatterns = [
-    path('', HomeTemplateView.as_view()),
+    path('', views.HomeTemplateView.as_view()),
+    path('api/recent', views.RecentWorkApiView.as_view())
 ]
